@@ -9,16 +9,6 @@ include('functions.php') ?>
 <head>
     <title>Reserveren kampingplek</title>
     <link rel="stylesheet" type="text/css" href="includes/style.css">
-    <script>
-        function validateForm(){
-            var x = document.forms["myForm"]["username"].value;
-            if (x == ""){
-                alert("Name must be filled out");
-                return false;
-            }
-
-        }
-    </script>
 </head>
 <body>
 <?php
@@ -53,5 +43,6 @@ include_once "header.php";
         Heeft u al een account? <a href="login.php">Sign in</a>
     </p>
 </form>
+<script src="main.js" ></script>
 </body>
 </html>
