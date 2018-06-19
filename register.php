@@ -35,7 +35,22 @@ include_once "header.php";
         <label>Confirm password</label>
         <input type="password" name="password_2">
     </div>
-    <div clas
+    <div>
+        <div >
+            <img id="captcha" src="/securimage/securimage_show.php" alt="CAPTCHA Image" />
+            <div class="input-field">
+                <input id="captchaInput" type="text" name="captcha_code" class="validate" onkeyup="validateForm()" size="10" maxlength="6" />
+                <label for="captchaInput" id="code">Type de code in</label>
+                <span class="errors"><?= isset($errors['captcha']) ? $errors['captcha'] : '' ?></span><br>
+                <a href="#" onclick="document.getElementById('captcha').src = 'includes/securimage/securimage_show.php?' + Math.random(); return false">[ Different Image ]</a>
+            </div><br>
+            <div class="input-field">
+                <input id="captchaInput" type="text" name="captcha_code" class="validate" onkeyup="validateForm()" size="10" maxlength="6" />
+                <label for="captchaInput" id="code">Type de code in</label>
+                <span class="errors"><?= isset($errors['captcha']) ? $errors['captcha'] : '' ?></span><br>
+                <a href="#" onclick="document.getElementById('captcha').src = 'includes/securimage/securimage_show.php?' + Math.random(); return false">[ Different Image ]</a>
+            </div><br>
+        </div>
     <div class="input-group">
         <button type="submit" class="btn teal waves-effect waves-light" name="register_btn">Register</button>
     </div>

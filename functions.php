@@ -19,6 +19,10 @@ function register(){
     // call these variables with the global keyword to make them available in function
     global $conn1, $errors, $username, $email;
 
+    include_once $_SERVER['DOCUMENT_ROOT'] . '/securimage/securimage.php';
+
+    $securimage = new Securimage();
+
     // receive all input values from the form. Call the e() function
     // defined below to escape form values
     $username    =  mysqli_real_escape_string($conn1, $_POST['username']);
@@ -27,6 +31,10 @@ function register(){
     $password_2  =  mysqli_real_escape_string($conn1,$_POST['password_2']);
 
     // form validation: ensure that the form is correctly filled
+    $errors = [];
+    if ($securimage->check($_POST['captcha_code']) == false) {
+        $errors['captcha'] = 'Wrong code';
+    }
     if (empty($username)) {
         array_push($errors, "Username is required");
     }
