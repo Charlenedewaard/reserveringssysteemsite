@@ -19,12 +19,12 @@ function register(){
     // call these variables with the global keyword to make them available in function
     global $conn1, $errors, $username, $email;
 
-    include_once $_SERVER['DOCUMENT_ROOT'] . '/securimage/securimage.php';
+    include_once $_SERVER['DOCUMENT_ROOT'] . '/securimage.php';
 
     $securimage = new Securimage();
 
-    // receive all input values from the form. Call the e() function
-    // defined below to escape form values
+
+    // securing sql injection
     $username    =  mysqli_real_escape_string($conn1, $_POST['username']);
     $email       =  mysqli_real_escape_string($conn1,$_POST['email']);
     $password_1  =  mysqli_real_escape_string($conn1,$_POST['password_1']);

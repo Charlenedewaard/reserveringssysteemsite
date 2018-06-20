@@ -17,7 +17,7 @@ include_once "header.php";
 <div class="header teal">
     <h2>Register</h2>
 </div>
-<form name="myForm" action="register.php" onsubmit="return validateForm()" method="post" >
+<form name="myForm" action="register.php"  method="post" >
     <?php echo display_error(); ?>
     <div class="input-group">
         <label>Username</label>
@@ -25,30 +25,31 @@ include_once "header.php";
     </div>
     <div class="input-group">
         <label>Email</label>
-        <input type="email" name="email" value="<?php echo $email ?>">
+        <input type="text" name="email" value="<?php echo $email ?>">
     </div>
     <div class="input-group">
         <label>Password</label>
-        <input type="password" name="password_1">
+        <input type="password" id="psw" name="password_1" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
     </div>
     <div class="input-group">
         <label>Confirm password</label>
         <input type="password" name="password_2">
     </div>
+    <div id="message">
+        <h3>Password must contain the following:</h3>
+        <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+        <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+        <p id="number" class="invalid">A <b>number</b></p>
+        <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+    </div>
     <div>
         <div >
-            <img id="captcha" src="/securimage/securimage_show.php" alt="CAPTCHA Image" />
+            <img id="captcha" src="securimage/securimage/securimage_show.php" alt="CAPTCHA Image" />
             <div class="input-field">
                 <input id="captchaInput" type="text" name="captcha_code" class="validate" onkeyup="validateForm()" size="10" maxlength="6" />
                 <label for="captchaInput" id="code">Type de code in</label>
                 <span class="errors"><?= isset($errors['captcha']) ? $errors['captcha'] : '' ?></span><br>
-                <a href="#" onclick="document.getElementById('captcha').src = 'includes/securimage/securimage_show.php?' + Math.random(); return false">[ Different Image ]</a>
-            </div><br>
-            <div class="input-field">
-                <input id="captchaInput" type="text" name="captcha_code" class="validate" onkeyup="validateForm()" size="10" maxlength="6" />
-                <label for="captchaInput" id="code">Type de code in</label>
-                <span class="errors"><?= isset($errors['captcha']) ? $errors['captcha'] : '' ?></span><br>
-                <a href="#" onclick="document.getElementById('captcha').src = 'includes/securimage/securimage_show.php?' + Math.random(); return false">[ Different Image ]</a>
+                <a href="#" onclick="document.getElementById('captcha').src = 'securimage/securimage/securimage_show.php?' + Math.random(); return false">[ Different Image ]</a>
             </div><br>
         </div>
     <div class="input-group">
