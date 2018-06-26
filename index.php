@@ -4,14 +4,14 @@ include_once 'config.php';
 ?>
 <section class="main-container">
     <div class="main.wrapper">
-        <h2>Ochtendgloren</h2>
+        <h2>Ochtend Gloren</h2>
         <div class="row">
             <div class="col push-s1">
 
                 <img src="1.jpg" alt="welkoms bord" class="col s5" width="500">
                 <div class="col m3">
                     <h3>Welkom op Camping Ochtend Gloren!</h3>
-                    <p>Camping Ochtend Gloren in Zeeland is de perfecte campingsite voor bezoekers van jong en oud.</p>
+                    <p>Camping Ochtend Gloren in Zeeland is de perfecte campingsite voor jong en oud.</p>
                 </div>
             </div>
 
@@ -24,9 +24,9 @@ include_once 'config.php';
         <div class="col push-s1">
             <img src="campingplek1.jpg" alt="camping plek 2" class="col s12 m5"  >
             <div class="col m3">
-                <h2>Oost west Oost best</h2>
-                <p>Een mooie campingplek in het oosten! Deze campingplek is geschikt voor elke campingganger. Hier kan u zowel met camper of tent staan. Deze plek ligt
-                dicht bij het Woeste Water zwembad die wij aanbieden. </p>
+                <h2>Oost West Oost Best</h2>
+                <p>Een mooie campingplek in het oosten! De campingplek is geschikt voor elke vakantieganger. Hier kunt u zowel met camper of tent staan. Deze plek ligt
+                vlakbij het Woeste Water Zwembad die wij hiernaast ook aanbieden. </p>
 
                 <a href="reservering.php" target="_blank">klik hier om te reserveren!</a>
         </div>
@@ -38,8 +38,8 @@ include_once 'config.php';
             <img src="campingplek2.jpg" alt="camping plek 2" class="col s5" >
             <div class="col m3">
                 <h2>Wild West</h2>
-                <p>Een leuke plek voor gezinnen met jongere kinderen! Deze campingplek is inclusief een kinderspeelparkje. Het Woeste Water Zwembad
-                ligt op 5-10 minuten lopen vanaf deze locatie. Op deze locatie kunt u een caravan of tent opzetten </p>
+                <p>Een prettige plek voor gezinnen met jonge kinderen! Deze campingplek is inclusief een kinderspeelpark, het Woeste Water Zwembad
+                ligt op 5-10 minuten loopafstand vanaf de locatie. Op deze locatie kunt u een caravan of tent opzetten </p>
                 <a href="reservering.php" target="_blank">klik hier om te reserveren!</a>
             </div>
         </div>
@@ -49,8 +49,8 @@ include_once 'config.php';
             <img src="campingplek3.jpg" alt="camping plek 3" class="col s5" >
             <div class="col m3">
                 <h2>South Side</h2>
-                <p>Voor de echte vakantiegenieter die graag nog van een beetje privacy houdt. Deze locatie is voorzien van heggen tussen
-                de plekken. Geschikt voor mensen die wat meer rust zoeken! locale café is vanaf deze locatie 15 minuten lopen. Op  deze locatie kunt u een caravan of tent opzetten</p>
+                <p>Voor de vakantieganger die graag nog van extra privacy houdt. De locatie is voorzien van heggen tussen
+                de plekken en is geschikt voor mensen die wat meer rust zoeken! Het locale café is vanaf deze locatie te bereiken op 15 minuten loopafstand. Ook op deze locatie kunt u een caravan of tent opzetten</p>
                 <a href="reservering.php" target="_blank">klik hier om te reserveren!</a>
             </div>
         </div>

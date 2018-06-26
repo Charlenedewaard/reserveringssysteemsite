@@ -7,7 +7,7 @@ include('functions.php') ?>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Reserveren kampingplek</title>
+    <title>Sign up</title>
     <link rel="stylesheet" type="text/css" href="includes/style.css">
 </head>
 <body>
@@ -21,19 +21,25 @@ include_once "header.php";
     <?php echo display_error(); ?>
     <div class="input-group">
         <label>Username</label>
-        <input type="text" name="username" value="<?php echo $username ?>">
+        <input type="text" id="username" name="username" value="<?php echo $username ?>">
+    </div>
+    <div id="messageusername">
+        <p id="letterusername" class="invalid">Must have a username</p>
     </div>
     <div class="input-group">
         <label>Email</label>
-        <input type="text" name="email" value="<?php echo $email ?>">
+        <input type="text" id="email" name="email" value="<?php echo $email ?>">
+    </div>
+    <div id="messageemail">
+        <p id="letteremail" class="invalid">Must contain <b>@</b></p>
     </div>
     <div class="input-group">
         <label>Password</label>
-        <input type="password" id="psw" name="password_1" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+        <input type="password" id="psw" name="password_1"  title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
     </div>
     <div class="input-group">
         <label>Confirm password</label>
-        <input type="password" name="password_2">
+        <input type="password" id="confirmpsw" name="password_2">
     </div>
     <div id="message">
         <h3>Password must contain the following:</h3>
@@ -41,6 +47,7 @@ include_once "header.php";
         <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
         <p id="number" class="invalid">A <b>number</b></p>
         <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+        <p id="match" class="invalid">Must match <b>first password</b></p>
     </div>
     <div>
         <div >
@@ -53,7 +60,7 @@ include_once "header.php";
             </div><br>
         </div>
     <div class="input-group">
-        <button type="submit" class="btn teal waves-effect waves-light" name="register_btn">Register</button>
+         <button type="submit" id="submit" class="btn teal waves-effect waves-light" name="register_btn" disabled>Register</button>
     </div>
     <p>
         Heeft u al een account? <a href="login.php">Sign in</a>

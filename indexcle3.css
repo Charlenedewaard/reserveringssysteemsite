@@ -544,7 +544,6 @@ input[type=submit] {
 .valid:before {
     position: relative;
     left: -35px;
-    content: "&#10004;";
 }
 
 /* Add a red text color and an "x" icon when the requirements are wrong */
@@ -555,5 +554,12 @@ input[type=submit] {
 .invalid:before {
     position: relative;
     left: -35px;
-    content: "&#10006;";
+}
+
+#messageusername {
+    display: none;
+}
+
+#messageemail {
+    display: none;
 }
